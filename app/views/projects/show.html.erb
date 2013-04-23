@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+	<section class="container project-title">
+		<div class="row">
+			<div class="span12">
+				<h1><%= @project.name %></h1>
+				<div class="sub-title"><%= @project.description %></div>
+			</div>
+			<p class="span10 offset1 portfolio-text">
+				<%= @project.content.html_safe %>
+			</p>
+		</div>
+	</section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Anggi Priatmadi Portfolio</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<section id="title" class="container">
+		<div class="row">
+			<div class="span12">
+				<a href="/"><h3><span class="color-text">Anggi</span> Priatmadi</h3></a>
+				<div class="date"><%= link_to "Home", root_path %> • <%= link_to "About", about_path %></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="intro container">
+	    <div class="row">
+	      <div class="span12">
+	        <p>Simple and functional design for the web and mobile
+	        <br />
+	        <a class="email" href="#">Send me an email</a></p>
+	      </div>
+	    </div>
+	  </section>
+
+<%= yield %>
+
+	<!-- Start Footer -->
+	<footer class="container">
+		<div class="row">
+			<div class="span12">
+				Copyright 2013 | Anggi Priatmadi
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+
+</body>
+</html>

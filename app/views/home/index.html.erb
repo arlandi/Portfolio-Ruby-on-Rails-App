@@ -1,0 +1,67 @@
+  <section id="page-title" class="container">
+    <div class="row">
+      <div class="span10">
+        <h2>Portfolio</h2>
+        <div class="dropdown">
+            <div class="dropmenu">
+              <p class="menu-title">Show</p>
+              <p class="selected">All projects</p>
+              <i class="icon-chevron-down"></i>
+            </div>
+            <div class="dropmenu-active">
+              <ul class="option-set" data-option-key="filter">
+                <li><a class="selected drop-selected" href="#filter" data-option-value="*">All projects</a></li>
+                 <% @categories.each do |work| %>
+                <li><a href="#filter" data-option-value=".<%= work %>"><%= work.capitalize %></a></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <hr class="span12 clear-bottom">
+    </div>
+  </section>
+
+    <section id="projects" class="container">
+    <div id="posts" class="isotope row">
+    
+      <!-- Start Project -->
+
+      <% @projects.each do |project| %>
+      <div class="post item span4 isotope-item <%= project.work %>">
+          <a href="<%= url_for(project) %>" class="project-wrp hover-down">
+            <div class="content-wrp">
+                <%= image_tag project.thumb.url %>
+                <p class="project-name"><%= project.name %></p>
+                <p class="project-desc"><%= project.description %></p>
+            </div>
+            <div class="overlay-wrp">
+                <div class="overlay"></div>
+            <p class="project-name"><%= project.name %></p>
+            <p class="project-desc"><%= project.description %></p>
+            <i class="icon-arrow-right"></i>
+              </div>
+          </a>
+      </div>
+      <% end %>
+      <!-- End Project -->
+      
+    </div>  
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="info-block">
+          <div class="ib-text">
+            <h6>Fork me on Github</h6>
+            <p>This portfolio is built on Ruby on Rails and available as open-source. Feel free to fork this project on github and use it as your own.</p>
+            <a href="#" class="btn rounded color">Download</a>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
