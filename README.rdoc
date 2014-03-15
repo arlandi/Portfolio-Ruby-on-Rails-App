@@ -1,5 +1,4 @@
-GitHub Markup
-=============
+#RoR Portfolio
 
 A Ruby on Rails app with minimalistic design to showcase your projects, ready to deploy to Heroku.
 Demo: http://limitless-taiga-6923.herokuapp.com
